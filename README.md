@@ -16,8 +16,8 @@ Lab 3: [Intro to Ansible](http://www.katacoda.com/jonatanblue/scenarios/1)
 Lab 4: [Intro to Chef](http://www.katacoda.com/rickhlwong/scenarios/chef)   
 
 ### Day 2   
-Lab 5: [Provision Infrastructure with Terraform](https://gist.github.com/jruels/174af83ac109944ae5f6fad40c6bbc1b)   
-Lab 6: [Ansible](https://gist.github.com/jruels/127ae997769eae363e4ceb8a5225359f)   
+Lab 5: [Provision Infrastructure with Terraform](labs/tf-vm/)   
+Lab 6: [Ansible](labs/ansible)   
 Lab 7: [Basic Jenkins Pipeline](https://www.katacoda.com/courses/jenkins/build-docker-images)   
 Lab 8: [Create Google Kubernetes cluster](labs/001-setup-gcp/)   
 Lab 11: [Terraform: Deploy Jenkins Server](labs/tf-jenkins-vm/)   
