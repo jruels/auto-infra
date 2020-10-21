@@ -15,14 +15,14 @@ In this tutorial, you'll complete these tasks:
 Create a free GitHub account if you do not already have one.   
 https://github.com/join
 
-Fork the following GitHub repository for the sample code - https://github.com/jruels/tf-labs  
+Fork the following GitHub repository for the sample code - [https://github.com/jruels/tf-labs](https://github.com/jruels/tf-labs)  
 
 To fork the repo to your own GitHub account, select the **Fork** button in the top right-hand corner.
 
 Setup Jenkins Webhook for automated builds. 
 
 Open GitHub repository settings in browser: 
-https://github.com/<your github account/tf-labs/settings/hooks
+https://github.com/<your_github_account/tf-labs/settings/hooks
 
 Click "Add webhook" 
 Fill in the Payload URL field with:
@@ -31,7 +31,7 @@ Fill in the Payload URL field with:
 Leave defaults and click "Add webhook"
 
 Generate Personal Access Token to authenticate from Jenkins to GitHub.
-1. In a browser visit: https://github.com/settings/tokens
+1. In a browser visit: [https://github.com/settings/tokens](https://github.com/settings/tokens)
 2. Log in to GitHub if prompted
 3. Click "Generate new token"
 	1. Name token
@@ -162,7 +162,9 @@ git push
 ```
 
 ## Install Ansible
-An Ansible binary is required on the Jenkins server. Log into the Jenkins instance through SSH and install Ansible using `pip3`
+An Ansible binary is required on the Jenkins server. 
+
+Log into the Jenkins instance through SSH and install Ansible using `pip3`
 ```
 ssh -i ~/.ssh/tf-key bitnami@<jenkins-vm-ip>
 sudo pip3 install ansible requests google-auth
