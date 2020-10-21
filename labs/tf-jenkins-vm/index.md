@@ -89,7 +89,7 @@ If everything looks good let's apply the changes
 terraform apply -var project_id=$DEVSHELL_PROJECT_ID -var jenkins_workers_project_id=$DEVSHELL_PROJECT_ID
 ```
 
-You should now see Terraform creating the requested resources. One the configuration has been applied Terraform will display out configured `outputs`
+You should now see Terraform creating the requested resources. Once the configuration has been applied Terraform will display configured `outputs`
 ```
 Outputs:
 
