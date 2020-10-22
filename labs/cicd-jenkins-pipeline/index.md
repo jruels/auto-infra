@@ -75,7 +75,7 @@ gcloud projects add-iam-policy-binding $PROJECT --role roles/compute.securityAdm
     --member serviceAccount:$SA_EMAIL
 gcloud projects add-iam-policy-binding $PROJECT --role roles/iam.serviceAccountActor \
     --member serviceAccount:$SA_EMAIL
-gcloud projects add-iam-policy-binding $PROJECT --role roles/storage.objectViewer \
+gcloud projects add-iam-policy-binding $PROJECT --role roles/storage.objectAdmin \
     --member serviceAccount:$SA_EMAIL
 ```
 ### Encode the service account key
