@@ -29,7 +29,7 @@ cd tf-jenkins
 Review the contents of the directory: 
 ```
 sudo apt install -y tree 
-tree . 
+tree -L 2 . 
 ```
 You will see the following: 
 ```
