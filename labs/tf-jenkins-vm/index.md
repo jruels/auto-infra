@@ -64,11 +64,6 @@ Initializing modules...
 Terraform has been successfully initialized!
 ```
 
-## SSH access 
-Generate an SSH key for access to the virtual machine after it is provisioned. 
-```
-ssh-keygen -f ~/.ssh/tf-key
-```
 
 ## Preview the changes Terraform will make
 Terraform requires environment details to be able to successfully run. We are going to use Google Cloud Shell's builtin variable `DEVSHELL_PROJECT_ID` to pass our `project_id` to Terraform as a variable.
