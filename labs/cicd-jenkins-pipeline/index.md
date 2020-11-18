@@ -51,21 +51,16 @@ Change to the directory containing the pipeline code:
 cd tf-labs
 ```
 
-## Create required service account 
+## Give Jenkins service account correct permissions
 We must configure Jenkins, Terraform and Ansible so they have access to our Google Cloud infrastructure. 
 
-1. Create service account using `gcloud`
-Type the following to create a new service account named `jenkins`
-```
-gcloud iam service-accounts create jenkins --display-name jenkins
-```
-2. Store the service account email address and your current Google Cloud project ID in environment variables for use in later commands:
+1. Store the service account email address and your current Google Cloud project ID in environment variables for use in later commands:
 ```
 export SA_EMAIL=$(gcloud iam service-accounts list \
     --filter="displayName:jenkins" --format='value(email)')
 export PROJECT=$(gcloud info --format='value(config.project)')
 ```
-3. Bind the following roles to your service account: 
+2. Bind the following roles to your service account: 
 ```
 gcloud projects add-iam-policy-binding $PROJECT --role roles/compute.instanceAdmin.v1 \
     --member serviceAccount:$SA_EMAIL
