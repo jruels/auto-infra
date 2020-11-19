@@ -6,6 +6,11 @@ Start by logging in to the [GCP Console](https://console.cloud.google.com) and l
 
 ## Prerequisites
 
+Enter the working directory created previously.
+```
+cd $(date +%Y%m%d)
+```
+
 Install the latest version of Terraform
 ```bash
 TER_VER=`curl -s https://api.github.com/repos/hashicorp/terraform/releases/latest | grep tag_name | cut -d: -f2 | tr -d \"\,\v | awk '{$1=$1};1'`

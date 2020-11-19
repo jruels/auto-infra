@@ -14,7 +14,7 @@ gcloud services enable compute.googleapis.com
 
 Create a new directory, which we'll use for future labs.
 ```
-mkdir $(date +%Y%m%d)/terraform
+mkdir -p $(date +%Y%m%d)/terraform
 ```
 
 Enter new directory
