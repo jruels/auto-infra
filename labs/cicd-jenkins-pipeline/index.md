@@ -39,6 +39,11 @@ Generate Personal Access Token to authenticate from Jenkins to GitHub.
 4. At the bottom of page click "Generate token"
 Make sure you save your token because it will not be shown again.
 
+Enter the working directory
+```
+cd ~/$(date +%Y%m%d)
+```
+
 Clone the repo to your development system. Make sure you use the URL of your fork when cloning this repo:
 
 ```
