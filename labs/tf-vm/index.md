@@ -12,7 +12,15 @@ gcloud services enable compute.googleapis.com
 
 ## Create working directory
 
-Create a new directory called `terraform` , which we'll use to save the work done in this lab.
+Create a new directory, which we'll use for future labs.
+```
+mkdir $(date +%Y%m%d)/terraform
+```
+
+Enter new directory
+```
+cd $_
+```
 
 ## Describe VM instance
 
@@ -73,7 +81,6 @@ $ gcloud config list project
 Now run the `init` command inside `terraform` directory to download the provider:
 
 ```bash
-$ cd ./terraform
 $ terraform init
 ```
 
@@ -103,8 +110,8 @@ $ gcloud compute instances list
 We did provisioning via Terraform, but we can also install some packages using GCP metadata scripts. Below is an example of modifying the metadata startup script with Terraform.
 
 ```terraform
-// Make sure flask is installed on all new instances for later steps
- metadata_startup_script = "sudo apt-get update; sudo apt-get install -yq build-essential python-pip rsync nginx; pip install flask"
+// Update metadata startup script to install some packages
+ metadata_startup_script = "sudo apt-get update; sudo apt-get install -yq build-essential python3-pip rsync nginx; pip3 install flask"
 ```
 
 
@@ -173,8 +180,8 @@ resource "google_compute_instance" "demo" {
     }
   }
   
-  // Make sure flask is installed on all new instances for later steps
- metadata_startup_script = "sudo apt-get update; sudo apt-get install -yq build-essential python-pip rsync nginx; pip install flask"
+  // Update metadata startup script to install some packages
+ metadata_startup_script = "sudo apt-get update; sudo apt-get install -yq build-essential python3-pip rsync nginx; pip3 install flask"
 
   # networks to attach to the VM
   network_interface {
