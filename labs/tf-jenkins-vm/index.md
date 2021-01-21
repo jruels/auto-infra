@@ -20,7 +20,7 @@ Confirm installation was successful
 terraform version 
 ```
 Output should be similiar to: 
-`terraform v0.13.4`
+`terraform v0.14.5`
 
 Enter the working directory created previously.
 ```
