@@ -176,7 +176,7 @@ sudo pip3 install ansible requests google-auth
 In this step we are going to upgrade Jenkins to the latest version. After the upgrade is complete we are going to upgrade and install some plugins. 
 
 1. Click "Manage Jenkins" on the left hand slide.
-2. You will see an alert that says "New version of Jenkins". To install it click the button labeled "or Upgrade Automatically" on the ride side of the screen.
+2. You will see an alert that says "New version of Jenkins". To install it click the button labeled "or Upgrade Automatically" on the right side of the screen.
 3. Select "Restart Jenkins when installation is complete and no jobs are running" to complete upgrade.
 4. Update all plugins by clicking "Manage plugins", scrolling to the bottom, clicking "Compatible" and then "Download now and install after restart".
 5. Install plugins by click on Updates at the top of the "Manage Plugins" page.  Search for and install the following:
