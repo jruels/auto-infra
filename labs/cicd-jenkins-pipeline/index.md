@@ -104,7 +104,7 @@ gsutil mb -c regional -l us-west2 gs://$DEVSHELL_PROJECT_ID-tfstate
 ### Update Project 
 A lot of the files being used for this lab do not support environment variables. They need to be updated to match the GCP projectID.
 
-After creating the bucket we need to update the `backends.tf` file to use the new bucket.  
+After creating the bucket we need to update the `backend.tf` file to use the new bucket.  
 
 It should look like this: 
 ```yaml
