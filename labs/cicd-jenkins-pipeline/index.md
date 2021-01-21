@@ -203,11 +203,11 @@ We need to copy the SSH public key from Cloud Shell to Jenkins VM.
 scp -i ~/.ssh/tf-key ~/.ssh/tf-key.pub bitnami@<VM IP>:
 ``` 
 
-2. Log into the Jenkins VM and move the key to `/opt/bitnami/jenkins/jenkins_home`
+2. Log into the Jenkins VM and move the key to `/home/bitnami/apps/jenkins/jenkins_home`
 ```
-sudo mv tf-key.pub /opt/bitnami/jenkins/jenkins_home/
-sudo chown jenkins.root /opt/bitnami/jenkins/jenkins_home/tf-key.pub
-sudo chmod 600 /opt/bitnami/jenkins/jenkins_home/tf-key.pub
+sudo mv tf-key.pub /home/bitnami/apps/jenkins/jenkins_home
+sudo chown jenkins.root /home/bitnami/apps/jenkins/jenkins_home
+sudo chmod 600 /home/bitnami/apps/jenkins/jenkins_home
 ```
 Create another credential for our SSH private key so that Ansible can connect to our provisioned virtual machine.
 1. Click "Manage Jenkins"
