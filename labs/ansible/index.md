@@ -4,7 +4,7 @@
 In this lab, you will get hands-on experience using Ansible to automate common manual tasks.
 
 ## Katacoda
-Log into [Katacoda Ansible playground](https://www.katacoda.com/openshift/courses/ansibleop/ansible-refresher-311)
+Log into [Katacoda Ansible playground](https://www.katacoda.com/jonatanblue/scenarios/1)
 
 Slide terminal to the left so the steps disappear. Follow the below steps: 
 
@@ -18,12 +18,12 @@ For example, this task installs pip on CentOS:
 
 ```
 - name: ensure pip is installed
-    yum:
+    apt:
       name: python-pip
       state: installed
 ```
 
-Every task uses a module. Here we use the yum module, a wrapper for the yum package manager, letting you specify what to do in YAML syntax.
+Every task uses a module. Here we use the apt module, a wrapper for the apt package manager, letting you specify what to do in YAML syntax.
 
 There are hundeds of different [modules](https://docs.ansible.com/ansible/modules_by_category.html) included in Ansible.
 
@@ -40,7 +40,7 @@ echo "[group1]" > myhosts
 
 Now add the host to the group:
 ```
-echo "host01 ansible_ssh_user=cent" >> myhosts
+echo "host01 ansible_ssh_user=ubuntu" >> myhosts
 ```
 
 Here we're also passing the username to use for the SSH access, as an [inventory parameter](https://docs.ansible.com/ansible/intro_inventory.html#list-of-behavioral-inventory-parameters)
@@ -88,7 +88,7 @@ Create a file with the following named `site.yml`
   become: true
   tasks:
     - name: ensure latest sysstat is installed
-      yum:
+      apt:
         name: sysstat
         state: latest
 ```
@@ -107,12 +107,12 @@ What happened here?
 `hosts`: host tells Ansible to run the tasks on the host host   
 `become: true` makes all your tasks run as sudo   
 `- name:` is basically a comment, describing what the task does   
-`yum` :` specifies the module we want to use   
-`name:` is an argument to the yum module, that specifies the name of the package to install.   
+`apt` :` specifies the module we want to use   
+`name:` is an argument to the apt module, that specifies the name of the package to install.   
 To see all arguments for a specific module, allowed values, and other details, you can use the CLI documentation that is included with Ansible:   
 
 ```
-ansible-doc yum 
+ansible-doc apt
 ```
 
 To close the documentation, enter q in the terminal.   
@@ -124,7 +124,7 @@ From the previous example:
 
 ```
 - name: ensure latest sysstat is installed
-    yum:
+    apt:
       name: sysstat
       state: latest
 ```
@@ -139,11 +139,11 @@ ansible-playbook -i myhosts site.yml
 
 #### Ensure a package is not present 
 
-The `yum` module allows you to specify the state you wish the package to be in. If you want a specific version, you append it to the package name, for example:   
+The `apt` module allows you to specify the state you wish the package to be in. If you want a specific version, you append it to the package name, for example:   
 
 ```
 - name: ensure sysstat is installed at version 10.2.0-1
-    yum:
+    apt:
       name: sysstat=10.2.0-1
       state: installed
 ```
