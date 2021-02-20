@@ -17,8 +17,7 @@ Lab 4: [Intro to Chef](http://www.katacoda.com/rickhlwong/scenarios/chef)
 
 ### Day 2   
 Lab 5: [Provision Infrastructure with Terraform](labs/tf-vm/)   
-Lab 6: [Ansible](labs/ansible)   
-Lab 7: [Basic Jenkins Pipeline](https://www.katacoda.com/courses/jenkins/build-docker-images)   
-Lab 8: [Terraform: Deploy Jenkins Server](labs/tf-jenkins-vm/)   
-Lab 9: [Fully Automated CICD Pipeline](labs/cicd-jenkins-pipeline/)   
+Lab 6: [Basic Jenkins Pipeline](https://www.katacoda.com/courses/jenkins/build-docker-images)   
+Lab 7: [Terraform: Deploy Jenkins Server](labs/tf-jenkins-vm/)   
+Lab 8: [Fully Automated CICD Pipeline](labs/cicd-jenkins-pipeline/)   
 
