@@ -12,7 +12,7 @@ This site includes the slides and labs for the Automate Infrastructure with Conf
 ### Day 1   
 Lab 1: [Get familiar with Git](https://www.katacoda.com/courses/git)   
 Lab 2: [Intro to Terraform](http://www.katacoda.com/courses/terraform/deploy-nginx)   
-Lab 3: [Intro to Ansible](http://www.katacoda.com/jonatanblue/scenarios/1)   
+Lab 3: [Intro to Ansible](labs/ansible/)   
 Lab 4: [Intro to Chef](http://www.katacoda.com/rickhlwong/scenarios/chef)   
 
 ### Day 2   
