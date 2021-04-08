@@ -204,9 +204,9 @@ scp -i ~/.ssh/tf-key ~/.ssh/tf-key.pub bitnami@<VM IP>:
 
 2. Log into the Jenkins VM and move the key to `/home/bitnami/apps/jenkins/jenkins_home`
 ```
-sudo mv tf-key.pub /home/bitnami/apps/jenkins/jenkins_home/
-sudo chown tomcat.tomcat /home/bitnami/apps/jenkins/jenkins_home/tf-key.pub
-sudo chmod 600 /home/bitnami/apps/jenkins/jenkins_home/tf-key.pub
+sudo mv tf-key.pub /bitnami/jenkins/jenkins_home/
+sudo chown tomcat.tomcat /bitnami/jenkins/jenkins_home/tf-key.pub
+sudo chmod 600 /bitnami/jenkins/jenkins_home/tf-key.pub
 ```
 Create another credential for our SSH private key so that Ansible can connect to our provisioned virtual machine.
 1. Click "Manage Jenkins"
