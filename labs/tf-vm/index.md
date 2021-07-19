@@ -213,7 +213,7 @@ You should see the public IP of the VM we created.
 
 Verify that you can ssh to the instance using the private key.
 ```bash
-ssh -i ~/.ssh/tf-key ubuntu@$(terraform output ip)
+ssh -i ~/.ssh/tf-key ubuntu@$(terraform output -raw ip)
 ```
 
 Also note, that during this Terraform run, no resources have been created or changed, which means that the actual state of our infrastructure already meets the requirements of a desired state.
