@@ -4,7 +4,7 @@
 In this lab, you will get hands-on experience using Ansible to automate common manual tasks.
 
 ## Katacoda
-Log into [Katacoda Ansible playground](https://www.katacoda.com/jonatanblue/scenarios/1)
+Log into [Katacoda Ansible playground](https://katacoda.com/courses/ubuntu/playground)
 
 Slide terminal to the left so the steps disappear. Follow the below steps: 
 
@@ -40,7 +40,7 @@ echo "[group1]" > myhosts
 
 Now add the host to the group:
 ```
-echo "host01 ansible_ssh_user=ubuntu" >> myhosts
+echo "host01 ansible_ssh_user=root" >> myhosts
 ```
 
 Here we're also passing the username to use for the SSH access, as an [inventory parameter](https://docs.ansible.com/ansible/intro_inventory.html#list-of-behavioral-inventory-parameters)
