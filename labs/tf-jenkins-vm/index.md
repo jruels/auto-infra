@@ -6,22 +6,6 @@ Start by logging in to the [GCP Console](https://console.cloud.google.com) and l
 
 ## Prerequisites
 
-
-Install the latest version of Terraform
-```bash
-cd ~
-TER_VER=`curl -s https://api.github.com/repos/hashicorp/terraform/releases/latest | grep tag_name | cut -d: -f2 | tr -d \"\,\v | awk '{$1=$1};1'`
-wget https://releases.hashicorp.com/terraform/${TER_VER}/terraform_${TER_VER}_linux_amd64.zip
-unzip terraform_${TER_VER}_linux_amd64.zip && sudo mv terraform /usr/local/bin/
-```
-
-Confirm installation was successful
-```
-terraform version 
-```
-Output should be similiar to: 
-`terraform v0.14.5`
-
 Enter the working directory created previously.
 ```
 cd $(date +%Y%m%d)
