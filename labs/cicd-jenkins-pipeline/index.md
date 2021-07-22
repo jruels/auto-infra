@@ -202,7 +202,7 @@ We need to copy the SSH public key from Cloud Shell to Jenkins VM.
 scp -i ~/.ssh/tf-key ~/.ssh/tf-key.pub bitnami@<VM IP>:
 ``` 
 
-2. Log into the Jenkins VM and move the key to `/home/bitnami/apps/jenkins/jenkins_home`
+2. Log into the Jenkins VM and move the key to the `Jenkins Home` directory
 ```
 sudo mv tf-key.pub /bitnami/jenkins/home/
 sudo chown jenkins.jenkins /bitnami/jenkins/home/tf-key.pub
