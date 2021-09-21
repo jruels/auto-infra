@@ -178,7 +178,7 @@ In this step we are going to upgrade Jenkins to the latest version. After the up
 1. Click "Manage Jenkins" on the left hand slide.
 2. You will see an alert that says "New version of Jenkins". It is safe to ignore this. 
 3. Update all plugins by clicking "Manage plugins", scrolling to the bottom, clicking "Compatible" and then "Download now and install after restart".
-4. Install plugins by click on Updates at the top of the "Manage Plugins" page.  Search for and install the following:
+4. Install plugins by click on Available at the top of the "Manage Plugins" page.  Search for and install the following:
 	1. Blue Ocean
 	2. Google Compute Engine
 	3. GitHub Integration
